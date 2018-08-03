@@ -4,7 +4,7 @@
      <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
      <!—Insertion of Confluence Header -->
      <meta name="decorator" content="atl.general">
-     $webResourceManager.requireResource("com.atlassian.fisheye.plugin.myplugin:test.js")
+     #requireResource("jp.co.kodnet.plugins.sample.Sample-Plugin:test")
    </head>
    <body>
     <div class="aui-message aui-message-error">

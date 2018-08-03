@@ -4,19 +4,29 @@
      <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
      <!-- Insertion of Confluence Header  -->
      <meta name="decorator" content="atl.general">
-    <script type="text/javascript" src="/js/test.js"></script>
+     #requireResource("jp.co.kodnet.plugins.sample.Sample-Plugin:test")
    </head>
    <body>
+    <article>
+        <ol class="aui-nav aui-nav-breadcrumbs">
+            <li><a href="http://example.com/">Menu</a></li>
+            <li><a href="http://example.com/">User</a></li>
+            <li class="aui-nav-selected">Regirst User</li>
+        </ol>
+    </article>
      <h1> Please cooperate with questionnaire </h1>
-    <form method="POST" action="$req.contextPath/plugins/questionary/output.action" class="aui">
-    <div class="field-group">
+    <form method="POST" action="$req.contextPath/plugins/questionary/output.action" class="aui" id="valid-submit-form">
+    <div class="field-group" style="padding-left:0px;">
         <fieldset class="group">
             <legend><span>Name</span><span class="aui-icon icon-required">(required)</span></legend>
             <input class="text medium-field" type="text" id="uname" name="uname" placeholder="your name...">
             <div class="description">please type your name</div>
+            <legend><span>Email</span><span class="aui-icon icon-required">(required)</span></legend>
+            <input class="text medium-field" type="text" id="email" name="email" placeholder="you@example.com">
+            <div class="description">please type your email</div>
         </fieldset>
     </div>
-    <div class="field-group">
+    <div class="field-group" style="padding-left:0px;">
         <fieldset class="group">
             <legend><span>Gender</span></legend>
             <div class="radio">
@@ -31,7 +41,7 @@
             </div>
         </fieldset>
     </div>
-    <div class="field-group">
+    <div class="field-group" style="padding-left:0px;">
         <fieldset class="group">
             <legend><span>Intresting fields <br>（Multiple selections are allowed）：</span></legend>
             <div class="checkbox">
@@ -62,9 +72,32 @@
     </div>
     <div class="buttons-container">
         <div class="buttons">
-            <input class="aui-button aui-button-primary" type="submit" value="Send">
+            <input class="aui-button aui-button-primary" type="submit" value="Send">          
         </div>
     </div> 
     </form>
+ 
+<div class="aui-tabs horizontal-tabs">
+    <ul class="tabs-menu">
+        <li class="menu-item active-tab">
+            <a href="#tabs-example-first">Tab 1</a>
+        </li>
+        <li class="menu-item">
+            <a href="#tabs-example-second">Tab 2</a>
+        </li>
+    </ul>
+    <div class="tabs-pane active-pane" id="tabs-example-first">
+        <h2>This is tab 1</h2>
+        <input type="button" value="click" onclick="msg()"/> 
+        <input class="aui-date-picker" id="demo-range-2" type="date" min="2018-01-01" />
+    </div>
+    <div class="tabs-pane" id="tabs-example-second">
+        <h2>This is tab 2</h2>
+        <button class="aui-button" id="example2-dialog-button">Show dialog</button>
+        <button class="aui-button aui-dropdown2-trigger" aria-controls="example-dropdown">
+            Dropdown menu
+        </button>
+    </div>
+</div>
   </body>
  </html>

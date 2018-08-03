@@ -6,13 +6,15 @@
      <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
 <!— Insertion Confluence Header -->
      <meta name="decorator" content="atl.general">
+    #requireResource("jp.co.kodnet.plugins.sample.Sample-Plugin:test")
    </head>
   <body>
     <h1> Please verify your entry</h1>
-    <table class="aui aui-table-sortable">
+    <table class="aui">
         <thead>
             <tr>
-                <th id="name" class="aui-table-column-issue-key">Name</th>
+                <th id="name">Name</th>
+                <th id="mail">Mail</th>
                 <th id="sex">Gender</th>
                 <th id="interests">Interests</th>
             </tr>
@@ -20,19 +22,19 @@
         <tbody>
             <tr>
                 <td headers="name">$action.uname</td>
+                <td headers="email">$action.email</td>
                 <td headers="sex">$action.sexValue</td>
                 <td class="interests" headers="order">
-                    <ul class="interests">
-                    #if($size == 0)
-                      <li>Nothing</li>
-                    #end
+                    <table>
                     #foreach($value in $action.interestsValue)
-                       #if($flag)
-                        <li>$value</li>
-                       #end   
-                       #set ($flag = true)
-                    #end
-                    </ul>
+                        #if($flag)
+                         <tr>
+                        #end
+                         <td>$value</td>
+                         </tr>
+                        #set ($flag = true)
+                     #end
+                    </table>
                 </td>
             </tr>
         </tbody>

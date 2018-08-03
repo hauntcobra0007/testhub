@@ -17,6 +17,7 @@ import java.util.List;
 public class OutputFormAction extends ConfluenceActionSupport{
     
     private String uname;
+    private String email;
     private String sexValue;
     private List<String> interestsValue;
     private String[] interestsStr = {" baseball","Football","rugby",
@@ -26,7 +27,11 @@ public class OutputFormAction extends ConfluenceActionSupport{
     public String execute() throws Exception {
         ActionContext context = ActionContext.getContext();
         setUname(this.getParameterValue(context, "uname"));
+        setEmail(this.getParameterValue(context, "email"));
         if(getUname() == null || "".equals(getUname())){
+            return ERROR;
+        }
+        if(getEmail() == null || "".equals(getEmail())){
             return ERROR;
         }
         int sex = Integer.parseInt(this.getParameterValue(context, "sex"));
@@ -77,6 +82,14 @@ public class OutputFormAction extends ConfluenceActionSupport{
      */
     public String getSexValue() {
         return sexValue;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     /**
