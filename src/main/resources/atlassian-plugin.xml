@@ -30,7 +30,7 @@
     <!-- import from the product container -->
     <component-import key="applicationProperties" interface="com.atlassian.sal.api.ApplicationProperties" />
     <web-item name="questionary" key="questionary-action-label" section="system.content.action/primary" weight="10">
-        <label key="Questionary.menu.label"/>
+        <label key="questionary.menu.label"/>
         <link linkId="questionary-action">/plugins/questionary/input.action</link>
     </web-item>
     <xwork name="questionary" key="questionary">
