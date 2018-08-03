@@ -4,11 +4,6 @@ function msg(){
  alert("Hello Javatpoint");  
 }
 AJS.$(document).ready(function() {
-    AJS.$('#demo-range-2').datePicker({'overrideBrowserDefault': true});
-    AJS.$('#valid-submit-form').on('aui-valid-submit', function(event) {
-        console.log('Data saved');
-        event.preventDefault();
-    });
 var dialog = new AJS.Dialog({
     width: 800,
     height: 500,

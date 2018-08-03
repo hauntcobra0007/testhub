@@ -18,6 +18,7 @@ public class OutputFormAction extends ConfluenceActionSupport{
     
     private String uname;
     private String email;
+    private String password;
     private String sexValue;
     private List<String> interestsValue;
     private String[] interestsStr = {" baseball","Football","rugby",
@@ -28,6 +29,7 @@ public class OutputFormAction extends ConfluenceActionSupport{
         ActionContext context = ActionContext.getContext();
         setUname(this.getParameterValue(context, "uname"));
         setEmail(this.getParameterValue(context, "email"));
+        setPassword(this.getParameterValue(context, "password"));
         if(getUname() == null || "".equals(getUname())){
             return ERROR;
         }
@@ -75,6 +77,14 @@ public class OutputFormAction extends ConfluenceActionSupport{
      */
     public void setUname(String uname) {
         this.uname = uname;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     /**

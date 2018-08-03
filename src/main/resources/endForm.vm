@@ -6,7 +6,9 @@
      <meta name="decorator" content="atl.general">
    </head>
    <body>
+    <div class="aui-message aui-message-success closeable">
      <h1>Thank you for your cooperation.</h1>
-    <a href="$req.contextPath/plugins/questionary/input.action">Return to the questionnaire input form</a>
+     <a href="$req.contextPath/plugins/questionary/input.action">Return to the questionnaire input form</a>
+    </div>
    </body>
 </html>
