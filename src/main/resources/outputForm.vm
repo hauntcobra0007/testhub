@@ -9,32 +9,37 @@
    </head>
   <body>
     <h1> Please verify your entry</h1>
-    <table border="1" width="300" height="150">
-     <tr>
-      <th>Name</th>
-      <td>$action.uname</td>
-     </tr>
-     <tr>
-      <th>Gender</th>
-      <td>$action.sexValue</td>
-     </tr>
-     <tr>
-      <th rowspan="$size"> Intresting fields</th>
-      #if($size == 0)
-        <td>Nothing</td>
-      #end
-      #foreach($value in $action.interestsValue)
-         #if($flag)
-          <tr>
-         #end
-          <td>$value</td>
-          </tr>
-         #set ($flag = true)
-      #end
+    <table class="aui aui-table-sortable">
+        <thead>
+            <tr>
+                <th id="name" class="aui-table-column-issue-key">Name</th>
+                <th id="sex">Gender</th>
+                <th id="interests">Interests</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td headers="name">$action.uname</td>
+                <td headers="sex">$action.sexValue</td>
+                <td class="interests" headers="order">
+                    <ul class="interests">
+                    #if($size == 0)
+                      <li>Nothing</li>
+                    #end
+                    #foreach($value in $action.interestsValue)
+                       #if($flag)
+                        <li>$value</li>
+                       #end   
+                       #set ($flag = true)
+                    #end
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
     </table>
     <br>
     <form method="GET" action="$req.contextPath/plugins/questionary/end.action">
-      <input type = "submit" value="Confirm" />
+      <input type = "submit" value="Confirm" class="aui-button aui-button-primary"/>
     </form>
   </body>
  </html>

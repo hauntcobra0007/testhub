@@ -15,8 +15,10 @@
         <dependency>com.atlassian.auiplugin:ajs</dependency>
         <dependency>com.atlassian.auiplugin:aui-dropdown2</dependency>
         <dependency>com.atlassian.auiplugin:aui-form-validation</dependency>
+        <dependency>com.atlassian.auiplugin:aui-table-sortable</dependency>
         <resource type="download" name="Sample-Plugin.css" location="/css/Sample-Plugin.css"/>
         <resource type="download" name="Sample-Plugin.js" location="/js/Sample-Plugin.js"/>
+        <resource type="download" name="test.js" location="/js/test.js"/>
         <resource type="download" name="images/" location="/images"/>
 
         <context>Sample-Plugin</context>
