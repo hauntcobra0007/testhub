@@ -1,0 +1,40 @@
+  <html>
+   #set ($size = $action.interestsValue.size())
+   #set ($flag = false)
+   <head>
+     <title>$i18n.getText("questionary.outputForm.page.title")</title>
+     <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<!— Insertion Confluence Header -->
+     <meta name="decorator" content="atl.general">
+   </head>
+  <body>
+    <h1> Please verify your entry</h1>
+    <table border="1" width="300" height="150">
+     <tr>
+      <th>Name</th>
+      <td>$action.uname</td>
+     </tr>
+     <tr>
+      <th>Gender</th>
+      <td>$action.sexValue</td>
+     </tr>
+     <tr>
+      <th rowspan="$size"> Intresting fields</th>
+      #if($size == 0)
+        <td>Nothing</td>
+      #end
+      #foreach($value in $action.interestsValue)
+         #if($flag)
+          <tr>
+         #end
+          <td>$value</td>
+          </tr>
+         #set ($flag = true)
+      #end
+    </table>
+    <br>
+    <form method="GET" action="$req.contextPath/plugins/questionary/end.action">
+      <input type = "submit" value="Confirm" />
+    </form>
+  </body>
+ </html>

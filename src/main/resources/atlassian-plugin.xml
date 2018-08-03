@@ -1,0 +1,51 @@
+<atlassian-plugin key="${project.groupId}.${project.artifactId}" name="${project.name}" plugins-version="2">
+    <plugin-info>
+        <description>${project.description}</description>
+        <version>${project.version}</version>
+        <vendor name="${project.organization.name}" url="${project.organization.url}" />
+        <param name="plugin-icon">images/pluginIcon.png</param>
+        <param name="plugin-logo">images/pluginLogo.png</param>
+    </plugin-info>
+
+    <!-- add our i18n resource -->
+    <resource type="i18n" name="i18n" location="Sample-Plugin"/>
+    
+    <!-- add our web resources -->
+    <web-resource key="Sample-Plugin-resources" name="Sample-Plugin Web Resources">
+        <dependency>com.atlassian.auiplugin:ajs</dependency>
+        <dependency>com.atlassian.auiplugin:aui-dropdown2</dependency>
+        <dependency>com.atlassian.auiplugin:aui-form-validation</dependency>
+        <resource type="download" name="Sample-Plugin.css" location="/css/Sample-Plugin.css"/>
+        <resource type="download" name="Sample-Plugin.js" location="/js/Sample-Plugin.js"/>
+        <resource type="download" name="images/" location="/images"/>
+
+        <context>Sample-Plugin</context>
+    </web-resource>
+    
+    <!-- publish our component -->
+    <component key="myPluginComponent" class="jp.co.kodnet.plugins.sample.MyPluginComponentImpl" public="true">
+        <interface>jp.co.kodnet.plugins.sample.MyPluginComponent</interface>
+    </component>
+    
+    <!-- import from the product container -->
+    <component-import key="applicationProperties" interface="com.atlassian.sal.api.ApplicationProperties" />
+    <web-item name="questionary" key="questionary-action-label" section="system.content.action/primary" weight="10">
+        <label key="Questionary.menu.label"/>
+        <link linkId="questionary-action">/plugins/questionary/input.action</link>
+    </web-item>
+    <xwork name="questionary" key="questionary">
+        <description>questionary Page</description>
+        <package name="questionary" extends="default" namespace="/plugins/questionary">
+            <action name="input" class="jp.co.kodnet.plugins.sample.InputFormAction">
+                <result name="success" type="velocity">/inputForm.vm</result>
+            </action>
+            <action name="output" class="jp.co.kodnet.plugins.sample.OutputFormAction" >
+                <result name="success" type="velocity">/outputForm.vm</result>
+                <result name="error" type="velocity">/error.vm</result>
+            </action>
+            <action name="end" class="jp.co.kodnet.plugins.sample.EndFormAction">
+                <result name="success" type="velocity">/endForm.vm</result>
+            </action>
+        </package>
+    </xwork>    
+</atlassian-plugin>

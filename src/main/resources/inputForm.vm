@@ -1,0 +1,197 @@
+<html>
+   <head>
+    <title>$i18n.getText("questionary.inputForm.page.title")</title>
+     <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+     <!-- Insertion of Confluence Header  -->
+     <meta name="decorator" content="atl.general">
+    <script type="text/javascript" src="/js/test.js"></script>
+   </head>
+   <body>
+     <h1> Please cooperate with questionnaire </h1>
+    <form method="POST" action="$req.contextPath/plugins/questionary/output.action">
+     <table border="1" width="300" height="150">
+       <tr>
+        <th>Name：</th>
+        <td> <input name="uname" type="text" /></td>
+       </tr>
+       <tr>
+        <th> Gender：</th>
+        <td>
+          <input name="sex" type="radio" value="0" checked /> Male <br>
+          <input name="sex" type="radio" value="1" /> Female
+        </td>
+       </tr>
+       <tr>
+        <th rowspan="6"> Intresting fields <br>（Multiple selections are allowed）：</th>
+        <td><input name="interests" type="checkbox" value="0" />baseball</td>
+       </tr>
+       <tr>
+        <td><input name="interests" type="checkbox" value="1" />Football </td>
+       </tr>
+       <tr>
+        <td><input name="interests" type="checkbox" value="2" />rugby</td>
+       </tr>
+       <tr>
+        <td><input name="interests" type="checkbox" value="3" />Sumo</td>
+       </tr>
+       <tr>
+        <td><input name="interests" type="checkbox" value="4" />Tennis</td>
+       </tr>
+       <tr>
+        <td><input name="interests" type="checkbox" value="5" />Table Tennis</td>
+       </tr>
+       <tr>
+        <td colspan="2" align="center"><input type="submit" value="Send"/></td>
+       </tr>
+     </table>
+    </form>
+    <table class="aui">
+        <thead>
+            <th>#</th>
+            <th>Name：</th>
+            <th> Gender：</th>
+            <th> Intresting fields <br>（Multiple selections are allowed）：</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td headers="basic-number">1</td>
+                <td headers="basic-fname">Matt</td>
+                <td headers="basic-lname">Bond</td>
+                <td headers="basic-username">mbond</td>
+            </tr>
+            <tr>
+                <td headers="basic-number">2</td>
+                <td headers="basic-fname">Ross</td>
+                <td headers="basic-lname">Chaldecott</td>
+                <td headers="basic-username">rchaldecott</td>
+            </tr>
+            <tr>
+                <td headers="basic-number">3</td>
+                <td headers="basic-fname">Henry</td>
+                <td headers="basic-lname">Tapia</td>
+                <td headers="basic-username">htapia</td>
+            </tr>
+        </tbody>
+    </table>
+<table class="aui aui-table-list" style="width: 500px">
+    <thead>
+        <tr>
+            <th id="author">Author</th>
+            <th id="commit">Commit</th>
+            <th id="date">Commit date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td headers="author">
+                <span class="aui-avatar aui-avatar-xsmall">
+                    <span class="aui-avatar-inner">
+                        <img src="images/pluginIcon.png" alt="Alana" />
+                    </span>
+                </span>
+                Alana
+            </td>
+            <td headers="commit">
+                <a href="#">2585eafcbca</a>
+            </td>
+            <td headers="date">1 hour ago</td>
+        </tr>
+        <tr class="aui-row-subtle">
+            <td headers="author">
+                <span class="aui-avatar aui-avatar-xsmall">
+                    <span class="aui-avatar-inner">
+                        <img src="images/pluginIcon.png" alt="Emma" />
+                    </span>
+                </span>
+                Emma
+            </td>
+            <td headers="commit">
+                <a href="#">057e4fa1472</a>
+            </td>
+            <td headers="date">2 hours ago</td>
+        </tr>
+        <tr>
+            <td headers="author">
+                <span class="aui-avatar aui-avatar-xsmall">
+                    <span class="aui-avatar-inner">
+                        <img src="images/pluginIcon.png" alt="Harvey" />
+                    </span>
+                </span>
+                Harvey
+            </td>
+            <td headers="commit">
+                <a href="#">6ba504ba68a</a>
+            </td>
+            <td headers="date">Yesterday</td>
+        </tr>
+        <tr>
+            <td headers="author">
+                <span class="aui-avatar aui-avatar-xsmall">
+                    <span class="aui-avatar-inner">
+                        <img src="images/pluginIcon.png" alt="Jose" />
+                    </span>
+                </span>
+                Jose
+            </td>
+            <td headers="commit">
+                <a href="#">96cae8b6ddc</a>
+            </td>
+            <td headers="date">3 days ago</td>
+        </tr>
+        <tr>
+            <td headers="author">
+                <span class="aui-avatar aui-avatar-xsmall">
+                    <span class="aui-avatar-inner">
+                        <img src="images/pluginIcon.png" alt="Mia" />
+                    </span>
+                </span>
+                Mia
+            </td>
+            <td headers="commit">
+                <a href="#">bf6c9e853ac</a>
+            </td>
+            <td headers="date">5 days ago</td>
+        </tr>
+        <tr>
+            <td headers="author">
+                <span class="aui-avatar aui-avatar-xsmall">
+                    <span class="aui-avatar-inner">
+                        <img src="images/pluginIcon.png" alt="William" />
+                    </span>
+                </span>
+                William
+            </td>
+            <td headers="commit">
+                <a href="#">711e734b705</a>
+            </td>
+            <td headers="date">1 week ago</td>
+        </tr>
+    </tbody>
+</table>
+<form class="aui">
+    <div class="field-group">
+        <label for="demo-message-length">Input with validation</label>
+        <input id="demo-message-length" class="text" type="text" data-aui-validation-field minlength="10">
+<button class="aui-button aui-button-primary">Button</button>
+    </div>
+</form>
+<div class="aui-tabs horizontal-tabs">
+    <ul class="tabs-menu">
+        <li class="menu-item">
+            <a href="#tabs-example-first">Tab 1</a>
+        </li>
+        <li class="menu-item active-tab">
+            <a href="#tabs-example-second">Tab 2</a>
+        </li>
+    </ul>
+    <div class="tabs-pane" id="tabs-example-first">
+        <h2>This is tab 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    <div class="tabs-pane active-pane" id="tabs-example-second">
+        <h2>This is tab 2</h2>
+        <button class="aui-button" id="example2-dialog-button">Show dialog</button>
+    </div>
+</div>
+  </body>
+ </html>
