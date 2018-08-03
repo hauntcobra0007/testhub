@@ -24,7 +24,7 @@
         </li>
     </ul>
     <div class="tabs-pane active-pane" id="tabs-example-first">
-        <h1> Please cooperate with questionnaire </h1>
+        <span class="aui-lozenge aui-lozenge-success">Please cooperate with questionnaire</span>
         <form method="POST" action="$req.contextPath/plugins/questionary/output.action" class="aui" id="valid-submit-form">
         <div class="field-group" style="padding-left:0px;">
             <fieldset class="group">
@@ -91,7 +91,7 @@
         </form>
     </div>
     <div class="tabs-pane" id="tabs-example-second">
-        <h2>This is tab 2</h2>
+        <span class="aui-lozenge aui-lozenge-success">This is tab 2</span>
         <button class="aui-button" id="example2-dialog-button">Show dialog</button>
         <input class="aui-button" type="button" value="click" onclick="msg()"/> 
     </div>

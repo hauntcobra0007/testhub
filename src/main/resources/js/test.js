@@ -4,6 +4,14 @@ function msg(){
  alert("Hello Javatpoint");  
 }
 AJS.$(document).ready(function() {
+    AJS.InlineDialog(jQuery('#mess'), 'myDialog', function(content, trigger, showPopup) { content.css({ padding: '20px' }).html(
+'<h2>Message info</h2>' +
+'<p>Please type your text into input</p>');
+showPopup();
+return false;
+});
+    
+    
 var dialog = new AJS.Dialog({
     width: 800,
     height: 500,
