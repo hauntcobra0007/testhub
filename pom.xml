@@ -50,6 +50,29 @@
             <artifactId>gson</artifactId>
             <version>2.2.2-atlassian-1</version>
         </dependency>
+       <!-- https://mvnrepository.com/artifact/com.atlassian.activeobjects/activeobjects-plugin -->
+<dependency>
+    <groupId>com.atlassian.activeobjects</groupId>
+    <artifactId>activeobjects-plugin</artifactId>
+    <version>0.24-m5-confluence</version>
+    <scope>provided</scope>
+</dependency>
+        <!-- Google Collections, useful utilities for manipulating collections -->
+        <dependency>
+          <groupId>com.google.collections</groupId>
+          <artifactId>google-collections</artifactId>
+          <version>1.0</version>
+          <scope>provided</scope>
+        </dependency>
+
+        <!-- We're going to write a simple servlet -->
+        <dependency>
+          <groupId>javax.servlet</groupId>
+          <artifactId>servlet-api</artifactId>
+          <version>2.4</version>
+          <scope>provided</scope>
+        </dependency>
+
     </dependencies>
 
     <build>

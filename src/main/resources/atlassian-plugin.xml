@@ -51,5 +51,23 @@
                 <result name="success" type="velocity">/endForm.vm</result>
             </action>
         </package>
-    </xwork>    
+    </xwork>
+    <!-- servlet -->
+    <servlet name="Todo List & Add Servlet" class="jp.co.kodnet.plugins.example.TodoServlet" key="todo-list">
+        <description>A servlet to add and list todos</description>
+        <url-pattern>/todo/list</url-pattern>
+    </servlet>
+    <!-- ao -->
+    <ao key="ao-module" name="Active Object Module">
+        <description>The module configuring the Active Objects service used by this plugin</description>
+        <entity>jp.co.kodnet.plugins.example.Todo</entity>
+    </ao>
+    
+    <component-import key="ao-service" name="Active Objects Service" interface="com.atlassian.activeobjects.external.ActiveObjects">
+        <description>Component to access Active Objects functionality from the plugin</description>
+    </component-import>
+    
+    <component key="tx-processor" name="Transactional Annotation Processor" class="com.atlassian.activeobjects.external.TransactionalAnnotationProcessor">
+        <description>Processes @Transactional annotations.</description>
+    </component>
 </atlassian-plugin>

@@ -7,94 +7,112 @@
      #requireResource("jp.co.kodnet.plugins.sample.Sample-Plugin:test")
    </head>
    <body>
-    <article>
-        <ol class="aui-nav aui-nav-breadcrumbs">
-            <li><a href="http://example.com/">Menu</a></li>
-            <li><a href="http://example.com/">User</a></li>
-            <li class="aui-nav-selected">Regirst User</li>
-        </ol>
-    </article>
-<div class="aui-tabs horizontal-tabs">
-    <ul class="tabs-menu">
-        <li class="menu-item active-tab">
-            <a href="#tabs-example-first">Tab 1</a>
-        </li>
-        <li class="menu-item">
-            <a href="#tabs-example-second">Tab 2</a>
-        </li>
-    </ul>
-    <div class="tabs-pane active-pane" id="tabs-example-first">
-        <span class="aui-lozenge aui-lozenge-success">Please cooperate with questionnaire</span>
-        <form method="POST" action="$req.contextPath/plugins/questionary/output.action" class="aui" id="valid-submit-form">
-        <div class="field-group" style="padding-left:0px;">
-            <fieldset class="group">
-                <legend><span>Name</span><span class="aui-icon icon-required">(required)</span></legend>
-                <input class="text medium-field" type="text" id="uname" name="uname" placeholder="your name...">
-                <div class="description">please type your name</div>
-                <legend><span>Email</span><span class="aui-icon icon-required">(required)</span></legend>
-                <input class="text medium-field" type="text" id="email" name="email" placeholder="you@example.com">
-                <div class="description">please type your email</div>
-                <legend><span>Password</span><span class="aui-icon icon-required">(required)</span></legend>
-                <input class="text medium-field" type="password" id="password" name="password">
-                <div class="description">please type your email</div>
-            </fieldset>
-        </div>
-        <div class="field-group" style="padding-left:0px;">
-            <fieldset class="group">
-                <legend><span>Gender</span></legend>
-                <div class="radio">
-                    <input class="radio" type="radio" checked="checked" value="0" 
-                           name="sex" id="male">
-                    <label for="male">Male</label>
-                </div>
-                <div class="radio">
-                    <input class="radio" type="radio" value="1" 
-                           name="sex" id="female">
-                    <label for="female">Female</label>
-                </div>
-            </fieldset>
-        </div>
-        <div class="field-group" style="padding-left:0px;">
-            <fieldset class="group">
-                <legend><span>Intresting fields <br>（Multiple selections are allowed）：</span></legend>
-                <div class="checkbox">
-                    <input class="checkbox" type="checkbox" name="interests" id="cb1" value="0">
-                    <label for="cb1">Baseball</label>
-                </div>
-                <div class="checkbox">
-                    <input class="checkbox" type="checkbox" name="interests" id="cb2" value="1">
-                    <label for="cb2">Football</label>
-                </div>
-                <div class="checkbox">
-                    <input class="checkbox" type="checkbox" name="interests" id="cb3" value="2">
-                    <label for="cb3">Rugby</label>
-                </div>
-                <div class="checkbox">
-                    <input class="checkbox" type="checkbox" name="interests" id="cb4" value="3">
-                    <label for="cb4">Sumo</label>
-                </div>
-                <div class="checkbox">
-                    <input class="checkbox" type="checkbox" name="interests" id="cb5" value="4">
-                    <label for="cb5">Tenis</label>
-                </div>
-                <div class="checkbox">
-                    <input class="checkbox" type="checkbox" name="interests" id="cb6" value="5">
-                    <label for="cb6">Table Tenis</label>
-                </div>
-            </fieldset>
-        </div>
-        <div class="buttons-container">
-            <div class="buttons">
-                <input class="aui-button aui-button-primary" type="submit" value="Send">          
+    <header class="aui-page-header">
+        <div class="aui-page-header-inner">
+            <div class="aui-page-header-image">
+                <span class="aui-avatar aui-avatar-large aui-avatar-project">
+                    <span class="aui-avatar-inner">
+                        <img alt="Atlassian logo" src="/confluence/download/resources/jp.co.kodnet.plugins.sample.Sample-Plugin:test/images/pluginLogo.png">
+                    </span>
+                </span>
             </div>
-        </div> 
-        </form>
+            <div class="aui-page-header-main">
+                <ol class="aui-nav aui-nav-breadcrumbs">
+                    <li><a href="http://example.com/">Menu</a></li>
+                    <li><a href="http://example.com/">User</a></li>
+                    <li class="aui-nav-selected">Regirst User</li>
+                </ol>
+            </div>
+            <div class="aui-page-header-actions">
+                <div class="aui-buttons">
+                    <button class="aui-button aui-button-light">Light button</button>
+                    <button class="aui-button aui-button-light">Light button</button>
+                    <button class="aui-button aui-button-light">Light button</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="aui-tabs horizontal-tabs">
+        <ul class="tabs-menu">
+            <li class="menu-item active-tab">
+                <a href="#tabs-example-first">Tab 1</a>
+            </li>
+            <li class="menu-item">
+                <a href="#tabs-example-second">Tab 2</a>
+            </li>
+        </ul>
+        <div class="tabs-pane active-pane" id="tabs-example-first">
+            <span class="aui-lozenge aui-lozenge-success">Please cooperate with questionnaire</span>
+            <form method="POST" action="$req.contextPath/plugins/questionary/output.action" class="aui" id="valid-submit-form">
+            <div class="field-group" style="padding-left:0px;">
+                <fieldset class="group">
+                    <legend><span>Name</span><span class="aui-icon icon-required">(required)</span></legend>
+                    <input class="text medium-field" type="text" id="uname" name="uname" placeholder="your name...">
+                    <div class="description">please type your name</div>
+                    <legend><span>Email</span><span class="aui-icon icon-required">(required)</span></legend>
+                    <input class="text medium-field" type="text" id="email" name="email" placeholder="you@example.com">
+                    <div class="description">please type your email</div>
+                    <legend><span>Password</span><span class="aui-icon icon-required">(required)</span></legend>
+                    <input class="text medium-field" type="password" id="password" name="password">
+                    <div class="description">please type your email</div>
+                </fieldset>
+            </div>
+            <div class="field-group" style="padding-left:0px;">
+                <fieldset class="group">
+                    <legend><span>Gender</span></legend>
+                    <div class="radio">
+                        <input class="radio" type="radio" checked="checked" value="0" 
+                               name="sex" id="male">
+                        <label for="male">Male</label>
+                    </div>
+                    <div class="radio">
+                        <input class="radio" type="radio" value="1" 
+                               name="sex" id="female">
+                        <label for="female">Female</label>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="field-group" style="padding-left:0px;">
+                <fieldset class="group">
+                    <legend><span>Intresting fields <br>（Multiple selections are allowed）：</span></legend>
+                    <div class="checkbox">
+                        <input class="checkbox" type="checkbox" name="interests" id="cb1" value="0">
+                        <label for="cb1">Baseball</label>
+                    </div>
+                    <div class="checkbox">
+                        <input class="checkbox" type="checkbox" name="interests" id="cb2" value="1">
+                        <label for="cb2">Football</label>
+                    </div>
+                    <div class="checkbox">
+                        <input class="checkbox" type="checkbox" name="interests" id="cb3" value="2">
+                        <label for="cb3">Rugby</label>
+                    </div>
+                    <div class="checkbox">
+                        <input class="checkbox" type="checkbox" name="interests" id="cb4" value="3">
+                        <label for="cb4">Sumo</label>
+                    </div>
+                    <div class="checkbox">
+                        <input class="checkbox" type="checkbox" name="interests" id="cb5" value="4">
+                        <label for="cb5">Tenis</label>
+                    </div>
+                    <div class="checkbox">
+                        <input class="checkbox" type="checkbox" name="interests" id="cb6" value="5">
+                        <label for="cb6">Table Tenis</label>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="buttons-container">
+                <div class="buttons">
+                    <input class="aui-button aui-button-primary" type="submit" value="Send">          
+                </div>
+            </div> 
+            </form>
+        </div>
+        <div class="tabs-pane" id="tabs-example-second">
+            <span class="aui-lozenge aui-lozenge-success">This is tab 2</span>
+            <button class="aui-button" id="example2-dialog-button">Show dialog</button>
+            <input class="aui-button" type="button" value="click" onclick="msg()"/> 
+        </div>
     </div>
-    <div class="tabs-pane" id="tabs-example-second">
-        <span class="aui-lozenge aui-lozenge-success">This is tab 2</span>
-        <button class="aui-button" id="example2-dialog-button">Show dialog</button>
-        <input class="aui-button" type="button" value="click" onclick="msg()"/> 
-    </div>
-</div>
   </body>
  </html>
