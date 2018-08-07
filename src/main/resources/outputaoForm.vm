@@ -1,0 +1,29 @@
+<html>
+    <head>
+    <title>$i18n.getText("demoao.outputForm.page.title")</title>
+     <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+     <!-- Insertion of Confluence Header  -->
+     <meta name="decorator" content="atl.general">
+     #requireResource("jp.co.kodnet.plugins.sample.Sample-Plugin:test")
+   </head>
+   <body>
+        <h1> This is your task</h1>
+        <table class="aui">
+            <thead>
+                <tr>
+                    <th id="task">Description</th>
+                    <th id="isComplete">isComplete</th>
+                </tr>
+            </thead>
+            <tbody
+                #foreach($value in $action.todoList)
+                     <tr>
+                        <td>$value.description</td>
+                        <td>$value.complete</td>
+                     </tr>
+                 #end   
+            </tbody>
+        </table>
+   </body>
+
+</html>

@@ -14,7 +14,8 @@ import java.util.List;
  */
 @Transactional
 public interface TodoService {
-    Todo add(String description);
+    Todo add(String description, boolean complete, String id);
     List<Todo> all();
-            
+    List<Todo> getById(String todoId);
+    //void associatePostToLabel(Post post, Label label) ;
 }

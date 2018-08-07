@@ -37,6 +37,10 @@
         <label key="questionary.menu.label"/>
         <link linkId="questionary-action">/plugins/questionary/input.action</link>
     </web-item>
+    <web-item name="demoao"  key="demoao-action-label" section="system.content.action/primary" weight="10">
+         <label key="demoao.menu.label"/>
+         <link linkId="demoao-action">/plugins/demoao/inputao.action</link>
+    </web-item>
     <xwork name="questionary" key="questionary">
         <description>questionary Page</description>
         <package name="questionary" extends="default" namespace="/plugins/questionary">
@@ -52,21 +56,34 @@
             </action>
         </package>
     </xwork>
+    <xwork name="demoao" key ="demoao">
+        <description>AO Page</description>
+        <package name="demoao"  extends="default" namespace="/plugins/demoao">
+            <action name="inputao" class="jp.co.kodnet.plugins.sample.InputaoFormAction">
+                <result name="success" type="velocity">/inputaoForm.vm</result>
+            </action>
+            <action name="outputao" class="jp.co.kodnet.plugins.sample.OutputaoFormAction">
+                <result name="success" type="velocity">/outputaoForm.vm</result>
+                <result name="error" type="velocity">/erroraoForm.vm</result>
+            </action>
+        </package>
+    </xwork>
     <!-- servlet -->
-    <servlet name="Todo List & Add Servlet" class="jp.co.kodnet.plugins.example.TodoServlet" key="todo-list">
+    <servlet name="Todo List Add Servlet" class="jp.co.kodnet.plugins.sample.TodoServlet" key="Sample-Plugin">
         <description>A servlet to add and list todos</description>
         <url-pattern>/todo/list</url-pattern>
     </servlet>
+    
     <!-- ao -->
     <ao key="ao-module" name="Active Object Module">
         <description>The module configuring the Active Objects service used by this plugin</description>
-        <entity>jp.co.kodnet.plugins.example.Todo</entity>
+        <entity>jp.co.kodnet.plugins.sample.Todo</entity>
     </ao>
+    <component key="todo-service" name="Todo Service" class="jp.co.kodnet.plugins.sample.TodoServiceIml"/>
     
     <component-import key="ao-service" name="Active Objects Service" interface="com.atlassian.activeobjects.external.ActiveObjects">
         <description>Component to access Active Objects functionality from the plugin</description>
-    </component-import>
-    
+    </component-import>    
     <component key="tx-processor" name="Transactional Annotation Processor" class="com.atlassian.activeobjects.external.TransactionalAnnotationProcessor">
         <description>Processes @Transactional annotations.</description>
     </component>

@@ -63,12 +63,12 @@ public class TodoServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        final String description = request.getParameter("task");
+        //final String description = request.getParameter("task");
         //ao.executeInTransaction(new TransactionCallback<Todo>() {
             //@Override
            // public Todo doInTransaction() {
                 //final Todo todo = ao.create(Todo.class);
-                todoService.add(description);
+                //todoService.add(description);
                 //todo.setDescription(description);
                 //todo.setComplete(false);
                 //todo.save();

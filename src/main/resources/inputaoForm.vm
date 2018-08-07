@@ -1,0 +1,47 @@
+<html>
+    <head>
+    <title>$i18n.getText("demoao.inputForm.page.title")</title>
+     <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+     <!-- Insertion of Confluence Header  -->
+     <meta name="decorator" content="atl.general">
+     #requireResource("jp.co.kodnet.plugins.sample.Sample-Plugin:test")
+   </head>
+   <body>
+        <div class="tabs-pane active-pane" id="tabs-example-first">
+            <span class="aui-lozenge aui-lozenge-success">Please regirst task</span>
+            <form method="POST" action="$req.contextPath/plugins/demoao/outputao.action" class="aui" id="valid-submit-form">
+            <div class="field-group" style="padding-left:0px;">
+                <fieldset class="group">
+                    <legend><span>Task</span><span class="aui-icon icon-required">(required)</span></legend>
+                    <input class="text medium-field" type="text" id="task" name="task" placeholder="your task...">
+                    <div class="description">please type your task</div>
+                    <legend><span>ID</span><span class="aui-icon icon-required">(required)</span></legend>
+                    <input class="text medium-field" type="text" id="id" name="id" placeholder="your id...">
+                    <div class="description">please type your id</div>
+                </fieldset>
+            </div>
+            <div class="field-group" style="padding-left:0px;">
+                <fieldset class="group">
+                    <legend><span>Complete</span></legend>
+                    <div class="radio">
+                        <input class="radio" type="radio" checked="checked" value="0" 
+                               name="complete" id="notComplete">
+                        <label for="notComplete">Not complete</label>
+                    </div>
+                    <div class="radio">
+                        <input class="radio" type="radio" value="1" 
+                               name="complete" id="complete">
+                        <label for="complete">Complete</label>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="buttons-container">
+                <div class="buttons">
+                    <input class="aui-button aui-button-primary" type="submit" value="Regirst">          
+                </div>
+            </div> 
+            </form>
+        </div>
+   </body>
+
+</html>
