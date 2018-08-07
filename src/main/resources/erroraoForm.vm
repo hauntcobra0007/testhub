@@ -1,0 +1,16 @@
+  <html>
+   <head>
+     <title>$i18n.getText("questionary.error.page.title")</title>
+     <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+     <!—Insertion of Confluence Header -->
+     <meta name="decorator" content="atl.general">
+     #requireResource("jp.co.kodnet.plugins.sample.Sample-Plugin:test")
+   </head>
+   <body>
+    <div class="aui-message aui-message-error">
+        <h1>Your name has not been entered</h1>
+        <a href="#" id="mess">Show Error</a>
+        <a href="$req.contextPath/plugins/questionary/input.action">Return to the questionnaire input form</a>
+    </div>
+  </body>
+ </html>
